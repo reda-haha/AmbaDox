@@ -24,7 +24,7 @@
                 navigator.clipboard.writeText(resultText).then(() => {
                     alert("Data copied to clipboard!");
                 }).catch(err => {
-                    alert("Failed to copy data: " + err);
+                    alert("Gagal Cil: " + err);
                 });
             }
         </script>
@@ -125,13 +125,13 @@
                 <p class="text-gray-400 mb-8"></p>
 
                 <div class="bg-gray-900 p-4 rounded-md mb-6">
-                    <label for="nikInput" class="block text-lg font-semibold mb-2">Enter NIK:</label>
+                    <label for="nikInput" class="block text-lg font-semibold mb-2">Niknya Tempel Disini:</label>
                     <input type="text" id="nikInput" placeholder="Enter NIK number" class="w-full p-3 bg-gray-800 text-green-500 border border-gray-700 rounded-md shadow-sm input-focus mb-4"/>
-                    <button onclick="parseNIK()" class="w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">NIK?</button>
+                    <button onclick="parseNIK()" class="w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Cek</button>
                 </div>
 
                 <div class="bg-gray-900 p-4 rounded-md">
-                    <strong class="text-lg">NIK?:</strong>
+                    <strong class="text-lg">Hasilnya Cil:</strong>
                     <pre id="result" class="bg-gray-800 text-green-500 p-4 mt-4 rounded-md overflow-x-auto"></pre>
                     <button onclick="copyToClipboard()" class="mt-4 w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Salin</button>
                 </div>

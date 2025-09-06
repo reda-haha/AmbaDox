@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Tools dokseng orang berbasis web">
         <meta property="og:image" content="https://i.pinimg.com/originals/cb/7f/d1/cb7fd1aaf24a5fa06289691568dd0873.jpg">
-        <title>Dokseng orang</title>
+        <title>AmbaTuk Nik</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script type="text/javascript" src="nik-parser.js"></script>
         <script>
@@ -121,25 +121,25 @@
             </div>
 
             <div class="p-6">
-                <h1 class="text-2xl font-bold mb-4"> Reda & Adjisan </h1>
+                <h1 class="text-2xl font-bold mb-4"> Reda </h1>
                 <p class="text-gray-400 mb-8"></p>
 
                 <div class="bg-gray-900 p-4 rounded-md mb-6">
                     <label for="nikInput" class="block text-lg font-semibold mb-2">Enter NIK:</label>
                     <input type="text" id="nikInput" placeholder="Enter NIK number" class="w-full p-3 bg-gray-800 text-green-500 border border-gray-700 rounded-md shadow-sm input-focus mb-4"/>
-                    <button onclick="parseNIK()" class="w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Parse NIK</button>
+                    <button onclick="parseNIK()" class="w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">NIK?</button>
                 </div>
 
                 <div class="bg-gray-900 p-4 rounded-md">
-                    <strong class="text-lg">Parsed NIK Data:</strong>
+                    <strong class="text-lg">NIK?:</strong>
                     <pre id="result" class="bg-gray-800 text-green-500 p-4 mt-4 rounded-md overflow-x-auto"></pre>
-                    <button onclick="copyToClipboard()" class="mt-4 w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Copy Result</button>
+                    <button onclick="copyToClipboard()" class="mt-4 w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Salin</button>
                 </div>
             </div>
         </div>
         
         <div class="audio-controls">
-            <button class="audio-toggle" id="audioToggle">🔇</button>
+            <button class="audio-toggle" id="audioToggle">🎧</button>
         </div>
         
         <audio id="backgroundAudio" loop muted>
@@ -178,7 +178,7 @@
             function toggleAudio() {
                 if (audioPlaying) {
                     audio.pause();
-                    audioToggle.textContent = '🔇';
+                    audioToggle.textContent = '🎧';
                     audioPlaying = false;
                 } else {
                     audio.muted = false;
@@ -187,9 +187,9 @@
                     if (playPromise !== undefined) {
                         playPromise.then(() => {
                             audioPlaying = true;
-                            audioToggle.textContent = '🔊';
+                            audioToggle.textContent = '🎧';
                         }).catch(error => {
-                            audioToggle.textContent = '🔇';
+                            audioToggle.textContent = '🎧';
                             audioPlaying = false;
                         });
                     }
@@ -205,7 +205,7 @@
                 
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
-                        audioToggle.textContent = '🔇';
+                        audioToggle.textContent = '🎧';
                     }).catch(error => {
                         console.log("Autoplay prevented:", error);
                     });

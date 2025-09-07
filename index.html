@@ -178,7 +178,7 @@
             function toggleAudio() {
                 if (audioPlaying) {
                     audio.pause();
-                    audioToggle.textContent = 'Play Musik';
+                    audioToggle.textContent = '🎧';
                     audioPlaying = false;
                 } else {
                     audio.muted = false;
@@ -187,10 +187,10 @@
                     if (playPromise !== undefined) {
                         playPromise.then(() => {
                             audioPlaying = true;
-                            audioToggle.textContent = '🎧';
+                            audioToggle.textContent = '❌';
                         }).catch(error => {
                             audioToggle.textContent = '🎧';
-                            audioPlaying = true;
+                            audioPlaying = false;
                         });
                     }
                 }
@@ -207,7 +207,7 @@
                     playPromise.then(() => {
                         audioToggle.textContent = '🎧';
                     }).catch(error => {
-                        console.log("Autoplay prevented:", error);
+                        console.log("Autoplay:", error);
                     });
                 }
             });

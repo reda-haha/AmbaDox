@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Cek Nik Orang By reda sayang cipa">
+        <meta name="description" content="Nik Checker By reda sayang cipa">
         <meta property="og:image" content="https://i.pinimg.com/originals/cb/7f/d1/cb7fd1aaf24a5fa06289691568dd0873.jpg">
-        <title>Cek Nik Orang By reda sayang cipa</title>
+        <title>Nik Checker</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script type="text/javascript" src="nik-parser.js"></script>
         <script>
@@ -22,7 +22,7 @@
             function copyToClipboard() {
                 const resultText = document.getElementById('result').innerText;
                 navigator.clipboard.writeText(resultText).then(() => {
-                    alert("Data copied to clipboard!");
+                    alert("Done Copy!");
                 }).catch(err => {
                     alert("Gagal Cil: " + err);
                 });
@@ -121,7 +121,7 @@
             </div>
 
             <div class="p-6">
-                <h1 class="text-2xl font-bold mb-4"> </h1>
+                <h1 class="text-2xl font-bold mb-4"></h1>
                 <p class="text-gray-400 mb-8"></p>
 
                 <div class="bg-gray-900 p-4 rounded-md mb-6">
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="bg-gray-900 p-4 rounded-md">
-                    <strong class="text-lg">Hasilnya Cil:</strong>
+                    <strong class="text-lg">Hasilnya:</strong>
                     <pre id="result" class="bg-gray-800 text-green-500 p-4 mt-4 rounded-md overflow-x-auto"></pre>
                     <button onclick="copyToClipboard()" class="mt-4 w-full py-3 bg-green-500 text-black font-semibold rounded-md shadow-md button-hover transition duration-200">Salin</button>
                 </div>
@@ -143,7 +143,7 @@
         </div>
         
         <audio id="backgroundAudio" loop muted>
-            <source src="https://k.top4top.io/m_3536hxi9l1.m4a" type="audio/mpeg">
+            <source src="https://files.catbox.moe/unbo27.mp3" type="audio/mpeg">
         </audio>
         
         <script>
@@ -178,7 +178,7 @@
             function toggleAudio() {
                 if (audioPlaying) {
                     audio.pause();
-                    audioToggle.textContent = '🎧';
+                    audioToggle.textContent = 'Play Musik';
                     audioPlaying = false;
                 } else {
                     audio.muted = false;
